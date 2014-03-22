@@ -1,0 +1,126 @@
+<script>
+	var pessoa = function() {
+		this.nome = '';
+		this.idade = '';
+		this.sexo = '';
+		this.cabelo = '';
+		this.numFilmesAdultos = 0;
+		this.gay = false;
+
+		this.setNome = function(valor) {
+			if (valor != 0 && valor != '') {
+				this.nome = valor;
+			} else {
+				this.nome = 'Indigente';
+			}
+		};
+
+		this.getNome = function() {
+			return this.nome;
+		};
+
+		this.setIdade = function(valor) {
+			if (valor != 0 && valor != '') {
+				this.idade = valor;
+			} else {
+				this.idade = 'Indefinido';
+			}
+		};
+
+		this.getIdade = function() {
+			return this.idade;
+		};
+
+		this.setSexo = function(valor) {
+			if (valor != 0 && valor != '') {
+				this.sexo = valor;
+			} else {
+				this.sexo = 'Indefinido';
+			}
+		};
+
+		this.getSexo = function() {
+			return this.sexo;
+		};
+
+		this.setCabelo = function(valor) {
+			if (valor != 0 && valor != '') {
+				this.cabelo = valor;
+			} else {
+				this.cabelo = 'Indefinido';
+			}
+		};
+
+		this.getCabelo = function() {
+			return this.cabelo;
+		};
+
+		this.setNumFilmesAdultos = function(valor) {
+			if (valor != '') {
+				this.numFilmesAdultos = valor;
+			} else {
+				this.numFilmesAdultos = 0;
+			}
+		};
+
+		this.getNumFilmesAdultos = function() {
+			return this.numFilmesAdultos;
+		};
+
+		this.setGay = function(valor) {
+			this.gay = valor;
+		};
+
+		this.getGay = function() {
+			resultadoDaBoyolice = '';
+
+			if (this.gay) {
+				resultadoDaBoyolice = 'E ele e gay!';
+			} else {
+				resultadoDaBoyolice = 'Ele fala que é macho, mais eu duvido';
+			}
+
+			return resultadoDaBoyolice;
+		};
+		
+		this.getCaiuNaNet = function(){
+			if(this.numFilmesAdultos > 0){
+				return 'Ishi!!! Caiu na net!!!';
+			} else{
+				return 'Ainda nao, mais toma cuidado!!!';
+			}
+		};
+	};
+
+	var listaDeIndividuos = new Array();
+
+	individuo = new pessoa();
+	individuo.setNome('XUXA');
+	individuo.setIdade('Muito velha');
+	individuo.setSexo('Nem sei mais');
+	individuo.setCabelo('Amarelo');
+	individuo.setNumFilmesAdultos(5);
+	listaDeIndividuos.push(individuo);
+
+	individuo = new pessoa();
+	individuo.setNome('Isaac');
+	individuo.setIdade('35');
+	individuo.setSexo('Indefinido');
+	individuo.setCabelo('Amarelo');
+	individuo.setNumFilmesAdultos(1);
+	individuo.setGay(true);
+	listaDeIndividuos.push(individuo);
+
+	individuo = new pessoa();
+	individuo.setNome('Ketryn');
+	individuo.setIdade('17');
+	individuo.setSexo('Feminino');
+	individuo.setCabelo('Ruivo');
+	individuo.setNumFilmesAdultos(0);
+	listaDeIndividuos.push(individuo);
+	
+	listaDeIndividuos.forEach(function(bean) {
+		console.log(bean.getNome(), bean.getCaiuNaNet());
+		console.log('######################\n');
+	});
+</script>

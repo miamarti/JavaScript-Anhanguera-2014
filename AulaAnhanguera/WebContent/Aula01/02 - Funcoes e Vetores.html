@@ -1,0 +1,43 @@
+<script>
+	function calcular(nunA, nunB, operador) {
+		console.log('A XUXA vai: ' + operador);
+
+		var resultado;
+
+		switch (operador) {
+		case '+':
+			resultado = nunA + nunB;
+			break;
+
+		case '-':
+			resultado = nunA - nunB;
+			break;
+		case '*':
+			resultado = nunA * nunB;
+			break;
+
+		case '/':
+			resultado = nunA / nunB;
+			break;
+
+		default:
+			resultado = 0
+			break;
+		}
+
+		return resultado;
+	}
+
+	var teste1 = calcular(10, 5, '*');
+	console.log(teste1);
+
+	// 	Teste2
+
+	var sapatosDaXUXA = new Array();
+
+	sapatosDaXUXA.push('sapato 1');
+	sapatosDaXUXA.push('sapato 2');
+	sapatosDaXUXA.push('E o preferido do Isaac');
+
+	console.log(sapatosDaXUXA);
+</script>
